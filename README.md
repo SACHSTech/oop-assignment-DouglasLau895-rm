@@ -5,5 +5,9 @@
 
 *Insert Class Diagram here*  
 
+![Image of Class Diagram](https://github.com/SACHSTech/oop-assignment-DouglasLau895-rm/blob/main/ICS4UOOPAssignmentClassDiagram.png)
+
 ## Summary
 *Include a brief summary that describes your system that your are modelling*
+
+The system that is being modelled is a grocery shopping app. 
