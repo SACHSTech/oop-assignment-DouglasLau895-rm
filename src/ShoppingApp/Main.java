@@ -7,9 +7,9 @@ import java.text.NumberFormat;
 
 /**
 * This program will allow user to select and purchase grocery
-* User can choose quantity, brand, etc. 
-* User can select between pick-up or delivery
-* User can select payment method
+* User can choose quantity, type, etc. 
+* User can view shopping list before checkout
+* User needs to enter a username and password to complete checkout process
 * @authors: Douglas Lau
 */
 
