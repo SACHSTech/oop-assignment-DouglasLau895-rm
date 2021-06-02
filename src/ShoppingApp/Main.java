@@ -73,5 +73,46 @@ public class Main {
         System.out.println("1 - Milk");
         System.out.println("2 - Ice Cream");
         itemSelect = Integer.parseInt(keyboard.readLine());
+
+        // Eggs Selection
+        if (itemSelect == 0) {
+          eggSelect = 5;
+          while (eggSelect > 2) {
+            System.out.println("What type of egg would you like?");
+            System.out.println("0 - Chicken Egg ($5.00/dozen)");
+            System.out.println("1 - Duck Egg ($6.50/dozen)");
+            System.out.println("2 - Golden Goose Egg ($20.00/dozen)");
+            eggSelect = Integer.parseInt(keyboard.readLine());
+        
+            switch (eggSelect) {
+              case 0:
+                eggType = "Chicken Egg";
+                eggInitialPrice = 5.00;
+                break;
+              case 1:
+                eggType = "Duck Egg";
+                eggInitialPrice = 6.50;
+                break;
+              case 2:
+                eggType = "Golden Goose Egg";
+                eggInitialPrice = 20.00;
+                break;
+              default:
+                System.out.println("Try Again!");
+                break;
+            }
+          }
+
+          System.out.println("How many dozens of " + eggType + " do you want?");
+          eggQuantitySelect = Integer.parseInt(keyboard.readLine());
+
+          Eggs newEgg = new Eggs(eggType, eggQuantitySelect, eggInitialPrice);
+
+          item.add(newEgg.getEggType());
+          quantity.add(newEgg.getEggAmount());
+          price.add(newEgg.getFinalPrice());
+
+          System.out.println(newEgg);
+        }
   }
 }
