@@ -114,5 +114,51 @@ public class Main {
 
           System.out.println(newEgg);
         }
+
+        // Milk Selection
+        if (itemSelect == 1) {
+          milkSelect = 5;
+          while (milkSelect > 3) {
+            System.out.println("What type of milk would you like?");
+            System.out.println("0 - Chocolate Milk ($10.00/Litre)");
+            System.out.println("1 - Skim Milk ($12.00/Litre)");
+            System.out.println("2 - 2% Milk ($5.00/Litre)");
+            System.out.println("3 - 1% Milk ($2.00/Litre)");
+            milkSelect = Integer.parseInt(keyboard.readLine());
+        
+            switch (milkSelect) {
+              case 0:
+                milkType = "Chocolate Milk";
+                milkInitialPrice = 10.00;
+                break;
+              case 1:
+                milkType = "Skim Milk";
+                milkInitialPrice = 12.00;
+                break;
+              case 2:
+                milkType = "2% Milk";
+                milkInitialPrice = 5.00;
+                break;
+              case 3:
+                milkType = "1% Milk";
+              milkInitialPrice = 2.00;
+                break;
+              default:
+                System.out.println("Try Again!");
+                break;
+            }
+          }
+
+          System.out.println("How many litres of " + milkType + " do you want?");
+          milkQuantitySelect = Integer.parseInt(keyboard.readLine());
+
+          Milk newMilk = new Milk(milkType, milkQuantitySelect, milkInitialPrice);
+
+          item.add(newMilk.getMilkType());
+          quantity.add(newMilk.getMilkAmount());
+          price.add(newMilk.getFinalPrice());
+
+          System.out.println(newMilk);
+        }
   }
 }
