@@ -59,5 +59,11 @@ public class Main {
       System.out.println("1 - Go Shopping");
       System.out.println("2 - View Shopping Cart");
       userSelect = Integer.parseInt(keyboard.readLine());
+
+      // 0 - Exit
+      if (userSelect == 0) {
+        System.out.println("Thanks for Shopping!");
+        break;
+      }
   }
 }
