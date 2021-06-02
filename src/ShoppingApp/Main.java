@@ -65,5 +65,13 @@ public class Main {
         System.out.println("Thanks for Shopping!");
         break;
       }
+
+      // 1 - Go Shopping
+      if (userSelect == 1) {
+        System.out.println("What would you like to purchase?");
+        System.out.println("0 - Eggs");
+        System.out.println("1 - Milk");
+        System.out.println("2 - Ice Cream");
+        itemSelect = Integer.parseInt(keyboard.readLine());
   }
 }
