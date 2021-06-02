@@ -218,5 +218,24 @@ public class Main {
           System.out.println(displayItem + " x " + displayQuantity + " -  $" + displayPrice);
           subtotal = subtotal + displayPrice;
         }
+
+        // display subtotal, tax, and total
+        System.out.println("-------------------------------");
+        System.out.println("Subtotal: " + currencyFormat.format(subtotal));
+        
+        tax = subtotal * 0.13;
+        System.out.println("Tax: " + currencyFormat.format(tax));
+
+        total = tax + subtotal;
+        System.out.println("Total: " + currencyFormat.format(total));
+
+        System.out.println("\nWould you like to proceed to checkout? (yes or no)");
+        checkoutSelect = keyboard.readLine();
+        if (checkoutSelect.equalsIgnoreCase("yes")) {
+          System.out.println("Please Enter Payment Information (Username = your name) (Password = abc123)");
+          System.out.println("\nUsername: ");
+          username = keyboard.readLine();
+          System.out.println("\nPassword: ");
+          password = keyboard.readLine();
   }
 }
