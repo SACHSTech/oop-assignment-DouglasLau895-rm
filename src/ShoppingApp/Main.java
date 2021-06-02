@@ -160,5 +160,47 @@ public class Main {
 
           System.out.println(newMilk);
         }
+
+        // Ice Cream Selection
+        if (itemSelect == 2) {
+          iceCreamSelect = 5;
+          while (iceCreamSelect > 2) {
+            System.out.println("What ice cream flavour would you like?");
+            System.out.println("0 - Vanilla ($2.00/Gram)");
+            System.out.println("1 - Chocolate ($2.00/Gram)");
+            System.out.println("2 - Strawberry ($2.00/Gram)");
+            iceCreamSelect = Integer.parseInt(keyboard.readLine());
+        
+            switch (iceCreamSelect) {
+              case 0:
+                iceCreamFlavour = "Vanilla Ice Cream";
+                iceCreamInitialPrice = 2.00;
+                break;
+              case 1:
+                iceCreamFlavour = "Chocolate Ice Cream";
+                iceCreamInitialPrice = 2.00;
+                break;
+              case 2:
+                iceCreamFlavour = "Strawberry Ice Cream";
+                iceCreamInitialPrice = 2.00;
+                break;
+              default:
+                System.out.println("Try Again!");
+                break;
+            }
+          }
+
+          System.out.println("How many grams of " + iceCreamFlavour + " do you want?");
+          iceCreamQuantitySelect = Integer.parseInt(keyboard.readLine());
+
+          IceCream newIceCream = new IceCream(iceCreamFlavour, iceCreamQuantitySelect, iceCreamInitialPrice);
+
+          item.add(newIceCream.getIceCreamFlavour());
+          quantity.add(newIceCream.getIceCreamAmount());
+          price.add(newIceCream.getFinalPrice());
+
+          System.out.println(newIceCream);
+        }
+      }
   }
 }
