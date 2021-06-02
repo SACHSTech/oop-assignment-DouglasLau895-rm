@@ -237,5 +237,16 @@ public class Main {
           username = keyboard.readLine();
           System.out.println("\nPassword: ");
           password = keyboard.readLine();
+
+          if (password.equals("abc123")) {
+            System.out.println("Payment Completed!");
+            System.out.println("Thank You " + username + " For Shopping!");
+            break;
+          } else {
+            System.out.println("Incorrect Password!");
+          }
+        }
+      }
+    }
   }
 }
