@@ -202,5 +202,21 @@ public class Main {
           System.out.println(newIceCream);
         }
       }
+
+      // 2 - View Shopping Cart
+      if (userSelect == 2) {
+        subtotal = 0;
+        // Prints out Shoppiong Cart
+        System.out.println("-------------------------------");
+        System.out.println("Below is your shopping cart");
+
+        // Display Purchases and determine subtotal
+        for (int i = 0; i <item.size(); i++) {
+          String displayItem = item.get(i);
+          int displayQuantity = quantity.get(i);
+          double displayPrice = price.get(i);
+          System.out.println(displayItem + " x " + displayQuantity + " -  $" + displayPrice);
+          subtotal = subtotal + displayPrice;
+        }
   }
 }
