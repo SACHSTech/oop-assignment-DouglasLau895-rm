@@ -15,5 +15,49 @@ import java.text.NumberFormat;
 
 public class Main {
   public static void main(String[] args) throws IOException{
+    
+    // Initializing Variables
+    int userSelect = 0;
+    int itemSelect = 0;
+    String checkoutSelect = "";
+    String username = "";
+    String password = "";
+
+    int eggSelect = 0;
+    int eggQuantitySelect = 0;
+    String eggType = "";
+    double eggInitialPrice = 0.00;
+
+    int milkSelect = 0;
+    int milkQuantitySelect = 0;
+    String milkType = "";
+    double milkInitialPrice = 0.00;
+
+    int iceCreamSelect = 0;
+    int iceCreamQuantitySelect = 0;
+    String iceCreamFlavour = "";
+    double iceCreamInitialPrice = 0.00;
+
+    double subtotal = 0.00;
+    double tax = 0.00;
+    double total = 0.00;
+
+    ArrayList<String> item = new ArrayList<String>();
+    ArrayList<Integer> quantity = new ArrayList<Integer>();
+    ArrayList<Double> price = new ArrayList<Double>();
+
+    // Welcome Message
+    System.out.println("Welcome to Shopping App, where you can purchase a variety of premium eggs, milk, and ice cream!");
+    
+    // Get user input on what they want to do
+    BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+
+    while (true) {
+      System.out.println("Please Enter Your Directory: ");
+      System.out.println("0 - Exit");
+      System.out.println("1 - Go Shopping");
+      System.out.println("2 - View Shopping Cart");
+      userSelect = Integer.parseInt(keyboard.readLine());
   }
 }
